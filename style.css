@@ -94,8 +94,6 @@
     display: block;
 }
 
-
-PARTE DEL CURSO 2 EVENTOS EN JAVASCRIPT (23/05/25)
 .ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
