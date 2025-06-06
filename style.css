@@ -1,64 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
     :root {
-        --cor-de-fundo: #222222;
         --verde: #6FFF57;
-        --branco: #FFFFFF;
-        --botao-ativo: #3f3b64;
-        --botao-inativo: rgba(48, 45, 78, 0.5);
-        --texto-fundo: rgba(33, 29, 73, 0.3);
+        --branco: #b8dffa;
+        --botao-ativo: #4d5189;
+        --botao-inativo: #171e2c;
+        --texto-fundo: #6358b62c;
     }
     
-    body {
-        background-color: var(--cor-de-fundo);
-        color: var(--branco);
-        font-family: 'Chakra Petch', sans-serif;
-    }
-    
-    
-    .conteudo-principal {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    .titulo-principal {
-        text-align: left;
-        width: 100%;
-        font-size: 32px;
-    }
-    
-    .titulo-principal span {
-        color: var(--verde);
-    }
-    
-    .botao {
-        font-family: "Chakra Petch", sans-serif;
-        background-color: var(--botao-inativo);
-        color: var(--branco);
-        display: flex;
-        justify-content: center;
-        padding: 1em;
-        font-size: 18px;
-        align-items: left;
-        width: 100%;
-        border-bottom: 4px solid var(--botao-ativo);
-        border-left: 2px solid var(--botao-ativo);
-        border-right: 2px solid var(--botao-ativo);
-        border-top: none;
-    }
-    
-    .botao:first-child {
-        border-radius: 40px 40px 0 0;
-    }
-    
-    .botoes {
-        display: block;
-    }
+body {
+    background: linear-gradient(70deg, #091b29, #020608);
+    color: var(--branco);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 .titulo-principal {
     text-align: left;
@@ -70,8 +35,9 @@
     color: var(--verde);
 }
 
+
 .botao {
-    font-family: "Chakra Petch", sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -94,21 +60,72 @@
     display: block;
 }
 
-.ativo{
+.botao.ativo {
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
 }
 
-@media screen and (min-width: 768px){
-    .botoes{
-    display:flex;
+.abas-textos {
+    background: linear-gradient(-10deg, #20073436 40%, #8188c25f);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 40px 20px 20px 0 rgba(0, 0, 0, 0.98);
+}
+
+.aba-conteudo.ativo {
+    display: block;
+}
+
+.aba-conteudo {
+    display: none;
+}
+
+.aba-conteudo-titulo-principal {
+    font-size: 28px;
+    text-align: center;
+}
+
+.aba-conteudo-titulo-secundario {
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contador-digito {
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.contador-digito-numero {
+    font-size: 80px;
+    margin: 0;
+
+}
+
+.contador-digito-texto {
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
     }
-}
 
-.botao:first-child {
-    border-radius: 40px 0 0 0;
-}
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
 
-.botao:last-child {
-    border-radius: 0 0 40px 0;
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
 }
